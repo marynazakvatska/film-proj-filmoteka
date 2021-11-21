@@ -1,0 +1,19 @@
+//base
+@import './utils/variables';
+@import './base/common';
+@import './base/container';
+
+// utils
+
+// general sass
+@import './header';
+@import './hero_movies';
+@import './modal_progr_film';
+@import './modal_about_us';
+@import './footer';
+// components
+// @import './components/button';
+@import './pagination';
+@import '~noty/src/noty.scss';
+@import '~noty/src/themes/mint.scss';
+@import '~noty/src/themes/sunset.scss';
