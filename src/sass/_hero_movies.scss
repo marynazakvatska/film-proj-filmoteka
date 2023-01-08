@@ -1,0 +1,266 @@
+.hero {
+  padding: 20px 0 40px 0;
+}
+
+.movies-card-img {
+  height: 402px;
+  width: 280px;
+  border-radius: 5px;
+}
+
+.movies-card {
+  margin-bottom: 20px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
+.movies-card:last-child {
+  margin-bottom: 0px;
+}
+
+.description-title {
+  font-family: Roboto;
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+
+  color: #000000;
+}
+
+.genre-release-date-point:not(:last-child)::after {
+  content: ', ';
+  color: #ff6b08;
+}
+
+.description-genre-release-date,
+.description-release-date {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  display: flex;
+  flex-wrap: wrap;
+
+  color: #ff6b08;
+}
+
+.description-release-date {
+  margin-left: 2px;
+  padding-left: 2px;
+  border-left: solid 2px #ff6b08;
+  color: #ff6b08;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    padding: 60px 0 50px 0;
+  }
+
+  .movies-card-img {
+    width: 294px;
+  }
+
+  .movies-card {
+    margin-bottom: 30px;
+    flex-basis: calc(100% / 2 - 30px);
+  }
+
+  .movies {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .movies-card:last-child {
+    margin-bottom: 0px;
+  }
+
+  .movies-card:nth-last-child(2) {
+    margin-bottom: 0px;
+  }
+
+  .movies-card:nth-child(2n + 1) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .movies {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .movies-card-img {
+    width: 274px;
+  }
+
+  .movies-card {
+    margin-bottom: 30px;
+    flex-basis: calc(100% / 3 - 30px);
+  }
+  .movies-card-img:hover,
+  .movies-card-img:focus {
+    transform: scale(1.03);
+    transition: 400ms cubic-bezier(0.1, 0.9, 0.9, 1.5);
+    box-shadow: -2px 7px 42px 34px rgba(240, 85, 0, 0.35);
+    border-radius: 4px;
+  }
+
+  .movies-card:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .movies-card:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+// @media screen and (min-width: 1200px) {
+//   .movies-card-img {
+//     max-width: 274px;
+//     height: auto;
+//   }
+// }
+
+.movies-card-vote {
+  position: absolute;
+  // top: 0;
+  // right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 20px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.17;
+  color: $color-light;
+  background-color: $color-accent;
+  border-radius: 5px;
+}
+
+// .arrow-hover {
+//   cursor: pointer;
+//   position: relative;
+//   width: 263.976px;
+//   // height: 450px;
+// }
+
+// .arrow-hover .btn__pagination__next {
+//   cursor: pointer;
+//   border: none;
+//   position: relative;
+//   top: 50%;
+//   left: 36%;
+//   width: 100px;
+//   height: 10px;
+//   background-color: #ff6b08;
+//   box-shadow: 0 3px 5px rgb(0 0 0 / 20%);
+//   display: block;
+// }
+
+// .arrow-hover .btn__pagination__next::after {
+//   content: '';
+//   position: absolute;
+//   width: 40px;
+//   height: 10px;
+//   top: -11px;
+//   right: -8px;
+//   background-color: #ff6b08;
+//   transform: rotate(45deg);
+// }
+// .arrow-hover .btn__pagination__next::before {
+//   content: '';
+//   position: absolute;
+//   width: 40px;
+//   height: 10px;
+//   top: 11px;
+//   right: -8px;
+//   background-color: #ff6b08;
+//   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+//   transform: rotate(-45deg);
+// }
+// .arrow-hover:hover {
+//   animation: arrow-hover 1s linear infinite;
+// }
+// @keyframes arrow-hover {
+//   0% {
+//     left: 0;
+//   }
+//   50% {
+//     left: 10px;
+//   }
+//   100% {
+//     left: 0;
+//   }
+// }
+.arrow-slider {
+  display: flex;
+  width: 263.976px;
+  justify-content: center;
+  align-items: center;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.arrow-slider .btn__pagination__next {
+  width: 200px;
+  height: auto;
+  margin: 0 2rem;
+  cursor: pointer;
+  overflow: visible;
+}
+.arrow-slider .btn__pagination__next polygon,
+.arrow-slider .btn__pagination__next path {
+  transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+  fill: #545454;
+}
+.arrow-slider .btn__pagination__next:hover polygon,
+.arrow-slider .btn__pagination__next:hover path {
+  transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
+  fill: #ff6b08;
+}
+.arrow-slider .btn__pagination__next:hover .arrow-slider-pl {
+  animation: arrow-slider-anim 1s cubic-bezier(0.2, 1, 0.3, 1) infinite;
+}
+.arrow-slider .btn__pagination__next:hover .arrow-slider-pl-fixed {
+  animation: arrow-slider-fixed-anim 1s cubic-bezier(0.2, 1, 0.3, 1) infinite;
+}
+
+@keyframes arrow-slider-anim {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  5% {
+    transform: translateX(-0.1rem);
+  }
+  100% {
+    transform: translateX(1rem);
+    opacity: 0;
+  }
+}
+@keyframes arrow-slider-fixed-anim {
+  5% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}

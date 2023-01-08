@@ -1,0 +1,71 @@
+<div class='container_modal_progr'>
+  <button type='button' class='button__close' data-modal-close="closeBtn">
+  </button>
+  <img
+    class='img modal__img'
+    src="https://image.tmdb.org/t/p/w500{{poster_path}}"
+    alt="{{title}}"  onError="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg';"
+  />
+  <!-- </div> -->
+  <div class='card_modal_progr'>
+    <h1 class='title_modal_progr upper_title'>
+      {{title}}
+    </h1>
+    <div class='info_modal_progr'>
+      <!--   <div class="title_info_modal_progr"> -->
+      <ul>
+        <li class='info_modal_progr_item'>
+          <span class='title_info_modal_progr vote_distance'>
+            Vote/Votes
+          </span>
+          <span class='data_items_modal_progr vote_average'>
+            {{vote_average}}
+          </span>  /
+          <span class='data_items_modal_progr vote_count'>
+            {{vote_count}}
+          </span>
+        </li>
+        <li class='info_modal_progr_item'>
+          <span class='title_info_modal_progr popularity_distance'>
+            Popularity
+          </span>
+          <span class='data_items_modal_progr'>
+            {{popularity}}
+          </span>
+        </li>
+        <li class='info_modal_progr_item'>
+          <span class='title_info_modal_progr title_distance'>
+            Original Title
+          </span>
+          <span class='data_items_modal_progr upper_title'>
+            {{title}}
+          </span>
+        </li>
+        <li class='info_modal_progr_item'>
+          <span class='title_info_modal_progr genre_distance'>
+            Genre
+          </span>
+          <span class='data_items_modal_progr'>
+           {{#each genres}}          
+             <span class="genrePoint">{{this.name}}</span>          
+               {{/each}}
+          </span>
+        </li>
+      </ul>
+    </div>
+    <p>
+      ABOUT
+    </p>
+    <p class='description_modal_progr'>
+      {{overview}}
+    </p>
+    <div class='buttons_modal_progr'>
+      <button type='button' class='add_watched {{#if watched}} watched {{/if}}'>
+        
+      </button>
+      <button type='button' class='add_queue {{#if queued}} queued {{/if}}'>
+
+      </button>
+    </div>
+  </div>
+</div>
